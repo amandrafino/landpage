@@ -1,0 +1,36 @@
+// So I can use BEM (block element modifier) for writing my SASS classes
+.header {
+
+  nav {
+    padding: 24px;
+  }
+  
+  &__logo {
+
+    img {}
+  }
+
+  &__menu {
+    // Mobile Menu
+
+    > span {
+      // direct child
+      display: block;
+      width: 26px;
+      height: 2px;
+      background: $darkBlue;
+
+      &:not(:last-child) {
+        // all other spans get 3px margin bottom
+        margin-bottom: 3px;
+      }
+    }
+  }
+
+  &__links {
+    a {
+      font-size: $font-sm;
+      color: $grayishBlue;
+    }
+  }
+}
