@@ -59,7 +59,7 @@ a, a:visited, a:hover {
 }
 
 button, .button {
-  padding: 1rem 1.875rem;
+  padding: 0.875rem 2.06rem;
   border: 0;
   border-radius: 50px;
   background: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
@@ -82,7 +82,13 @@ button, .button {
 }
 
 .header nav {
-  padding: 24px;
+  padding: 17px 24px;
+  padding: 1.06rem 1.50rem;
+}
+
+.header__logo img {
+  width: 8.8125rem;
+  height: 1.375;
 }
 
 .header__menu > span {
@@ -97,8 +103,38 @@ button, .button {
 }
 
 .header__links a {
+  position: relative;
   font-size: 0.875rem;
   color: #9698a6;
+  -webkit-transition: 300ms ease-in;
+  transition: 300ms ease-in;
+}
+
+.header__links a:not(:last-child) {
+  margin-right: 32px;
+}
+
+.header__links a:hover {
+  color: #2d314d;
+}
+
+.header__links a:hover::before {
+  opacity: 1;
+}
+
+.header__links a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 5px;
+  opacity: 0;
+  left: 0;
+  right: 0;
+  bottom: -30px;
+  background: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
+  background: linear-gradient(to right, #31d35c, #2bb7da);
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
 }
 
 .header__cta {
