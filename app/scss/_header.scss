@@ -7,7 +7,9 @@
   
   &__logo {
 
-    img {}
+    img {
+
+    }
   }
 
   &__menu {
@@ -32,5 +34,10 @@
       font-size: $font-sm;
       color: $grayishBlue;
     }
+  }
+
+  &__cta {
+    font-size: $font-sm;
+    color: $white;
   }
 }
