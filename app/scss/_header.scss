@@ -23,10 +23,36 @@
       width: 26px;
       height: 2px;
       background: $darkBlue;
+      transition: all 300ms ease-in-out;
+      transform-origin: center ;
+
+      &:last-child {
+        background: rgb(192, 140, 140);
+        width: 20px;
+        height: 3px; 
+      }
 
       &:not(:last-child) {
         // all other spans get 3px margin bottom
-        margin-bottom: 3px;
+        margin-bottom: 5px;
+      }
+    }
+
+    // helper class
+    &.open {
+      > span:first-child {
+        transform: rotate(45deg) translate(5px, 8px);
+      }
+
+      > span:nth-child(2){
+        opacity: 0;
+      }
+
+      > span:last-child {
+        transform: rotate(-45deg) translate(2px, -6.5px);
+        width: 26px;
+        height: 2px;
+        background: inherited;
       }
     }
   }

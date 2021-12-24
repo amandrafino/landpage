@@ -96,10 +96,37 @@ button, .button {
   width: 26px;
   height: 2px;
   background: #2d314d;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.header__menu > span:last-child {
+  background: #c08c8c;
+  width: 20px;
+  height: 3px;
 }
 
 .header__menu > span:not(:last-child) {
-  margin-bottom: 3px;
+  margin-bottom: 5px;
+}
+
+.header__menu.open > span:first-child {
+  -webkit-transform: rotate(45deg) translate(5px, 8px);
+          transform: rotate(45deg) translate(5px, 8px);
+}
+
+.header__menu.open > span:nth-child(2) {
+  opacity: 0;
+}
+
+.header__menu.open > span:last-child {
+  -webkit-transform: rotate(-45deg) translate(2px, -6.5px);
+          transform: rotate(-45deg) translate(2px, -6.5px);
+  width: 26px;
+  height: 2px;
+  background: inherited;
 }
 
 .header__links a {
